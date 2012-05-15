@@ -1,5 +1,5 @@
 var areas = ["Rooftop","Bank","Vault","Safe-house"];
-var spotTime = [5,5,15,20];
+var spotTime = [10,20,15,25];
 var driver = {
 	name: "James",
 	drive: 120
@@ -32,7 +32,7 @@ var handleData = function (json) {
 //Number function
 var planThink = function () {
 	var spotPick = 4
-	var totalTime = 45 / spotPick
+	var totalTime = 70 / spotPick
 	while (spotPick <= 4) {
 	console.log("If they are going where I think they are going, they will hit " + spotPick + " areas on this building.");
 	console.log("If they still go by their same routine then it would take them about " + totalTime + " minutes to complete the robbery.");
@@ -56,8 +56,8 @@ var whoWill = function () {
   console.log("We have some serious thinking to do. These guys have a different plan than usual");
 }
 	};
-				
-				
+
+
 
 	
 intro();
@@ -73,3 +73,27 @@ planThink();
 console.log("What are you thinking, Boss?");
 
 whoWill();
+
+console.log("Smith: We have the plan, so let's get to work!");
+
+//Array function
+var theSpots = function (spot) {
+	 
+            var spotName = areas[spot];
+            var minutesMove = spotTime[time];
+            console.log("Alright guys we are heading to the " + spotName + " for no more than " + minutesMove + " minutes. The timer is going. Let's move!");         
+            for (var minutes = 0; minutes < minutesMove; minutes += 5) {
+                    var minutesRemain = minutesMove - minutes;
+                    console.log("We have " + minutesRemain + " minutes left. " + minutes + " minutes have past! Come on let's go!");
+            }
+            console.log("Alright, let's go before the cops catch us!");
+        };
+
+        for (var time = 0; time < areas.length; time++) {
+            theSpots(time); 
+            
+        };
+        
+console.log("Smith: Good work guys. We need to get out of town before the cops track us down.");
+
+console.log("Boss, we are too late! The guys completed the robbery, and their safe-house is cleared. They can be out of town by now!");
