@@ -57,8 +57,19 @@ var whoWill = function () {
 }
 	};
 
+//Object function
+var ohNo = function () {
+	driver.drive = 75;
+	for (driver.drive <= 75;  driver.drive -= 25;) {
+		console.log("Looks like they are slowing down. They are only going " + driver.drive + " an hour. We just might catch them!");
+		for (money = 10; money <= 20; money += 5) {
+			console.log("What are they doing? They're throwing " + money + " money bags at us!");
+			}
+		}
+		};
 
-
+//Accessor method		
+var damage = areas.toString();
 	
 intro();
 
@@ -97,3 +108,9 @@ var theSpots = function (spot) {
 console.log("Smith: Good work guys. We need to get out of town before the cops track us down.");
 
 console.log("Boss, we are too late! The guys completed the robbery, and their safe-house is cleared. They can be out of town by now!");
+
+console.log("No! I see them straight ahead! Looks like they are having car troubles.");
+
+ohNo();
+
+console.log("We got them, Boss! The other officers just called and told us there was no damage to the " + damage + " . They were clean, but we still have evidence.");
