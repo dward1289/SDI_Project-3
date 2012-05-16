@@ -57,7 +57,7 @@ var whoWill = function () {
 }
 	};
 
-//Object function
+//Object function with mutator
 var ohNo = function () {
 	driver.drive = 75;
 	for (driver.drive <= 75;  driver.drive -= 25;) {
@@ -70,6 +70,15 @@ var ohNo = function () {
 
 //Accessor method		
 var damage = areas.toString();
+
+//Procedure function
+var goPlan = function () {
+	for (var goMan = 0; goMan < areas.length; goMan++){
+	var goHere = areas[goMan], time = spotTime[goMan];
+	console.log("They planned go to the " + goHere + " for " + time + " minutes.");
+	}
+	console.log("We finally caught these guys. Less crime out in the street. Good job, Boss!");
+	};
 	
 intro();
 
@@ -114,3 +123,5 @@ console.log("No! I see them straight ahead! Looks like they are having car troub
 ohNo();
 
 console.log("We got them, Boss! The other officers just called and told us there was no damage to the " + damage + " . They were clean, but we still have evidence.");
+
+goPlan();
